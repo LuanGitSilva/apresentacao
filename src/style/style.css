@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: min(65rem, 100%);
+    margin-inline: auto;
+    text-align: justify;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+    overflow: overlay;
+}
+
+nav {
+    height: 7.4rem;
+    background-color: rgba(0, 0, 0, 0.268);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+nav .nav-itens {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 5rem;
+    height: 100%;
+}
+
+nav .nav-1 {
+    height: 100%;
+}
+
+nav .nav-itens img {
+    height: 100%;
+    padding-block: .5rem;
+    cursor: pointer;
+}
+
+nav .nav-2 ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+nav .nav-2 ul li {
+    background-color: rgba(0, 255, 255, 0.226);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav .nav-2 ul li:hover {
+    background-color: rgba(0, 0, 0, 0.729);
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+header {
+    height: 45rem;
+    width: 100vw;
+    padding-top: 15rem;
+    background-image: linear-gradient(to right, black, rgb(6, 6, 113), blue, rgb(0, 217, 255));
+     
+}
+
+header .inicio {
+    display: flex;
+    align-items: end;
+    justify-content: space-evenly;
+}
+
+header .col-a {
+    width: 35rem;
+    text-align: left;
+    color: white;
+    padding-bottom: 3rem;
+}
+
+header .col-a h1 {
+    font-size: 5rem;
+    padding-block: 1.3rem;
+}
+
+header .col-a h3 {
+    font-size: 2.3rem;
+}
+
+img {
+    height: 30rem;
+}
+
+main h2 {
+    font-size: 3.7rem;
+    padding-block: 6rem 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+main .quem-sou-1,
+main .quem-sou-2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-block: 3rem;
+}
+
+main .projetos {
+    height: 80rem;
+}
+
+main .pequeno {
+    width: 27.3rem;
+    font-size: 2rem;
+    text-indent: 5rem;
+}
+
+main .projeto,
+main .projeto img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 1.5rem;
+}
+
+main .projetos p {
+    font-size: 2rem;
+    text-indent: 5rem;
+    padding-block: 2rem 4rem;
+}
+
+main .quadro ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 70rem;
+    justify-content: center;
+    text-align: center;
+    margin-inline: auto;
+    gap: 2rem;
+}
+
+main .quadro li {
+    list-style: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+main .quadro li:hover {
+    transform: scale(1.7);
+}
+
+main .experiencias {
+    height: 85rem;
+}
+
+main .experiencia,
+main .experiencia img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 1.5rem;
+}
+
+main .experiencias p {
+    font-size: 2rem;
+    text-indent: 5rem;
+    padding-block: 2rem 4rem;
+}
+
+footer {
+    height: 14rem;
+    width: 100vw;
+    padding-top: 3rem;
+    background-image: linear-gradient(to right, black, rgb(6, 6, 113), blue, rgb(0, 217, 255));
+    color: white;
+}
+
+footer .final {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer .footer-a {
+    width: 48rem;
+    text-align: left;
+    color: white;
+}
+
+footer .footer-a p {
+    line-height: 2.8rem;
+    display: flex;
+    gap: 1rem;
+    font-weight: bold;
+}
+
+footer .footer-b {
+    width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer button {
+    width: 16rem;
+    height: 4rem;
+    border-radius: 3rem;
+    border: none;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+footer button:hover{
+    background-image: linear-gradient(to left, rgb(4, 4, 85), rgb(43, 43, 244), rgb(99, 182, 255), rgb(138, 235, 252));
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+    transition: .4s ease-in-out;
+    transform: scale(1.15);
+    border: .2rem solid black;
+}
+
+footer button svg {
+    height: 90%;
+}
