@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apresentação</title>
+    <title>Minha apresentação</title>
 
+    <link rel="shortcut icon" href="./src/imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./src/style/style.css">    
 </head>
 <body>
@@ -30,8 +31,8 @@
         </div>
     </nav>
 
-    <header>
-        <div id="inicio" class="inicio">
+    <header id="inicio">
+        <div id="header" class="inicio">
             <div class="col-a">
                 <h3>Olá, seja bem vindo à minha apresentação, meu nome é</h3>
                 <h1>Luan Silva,</h1>
@@ -43,14 +44,14 @@
         </div>
     </header>
 
-    <main>
-        <div id="quem-sou" class="wrapper">
+    <main id="main">
+        <div id="quem-sou" class="wrapper quem-sou">
             <div>
                 <h2>
                     Quem sou?
                 </h2>
             </div>
-            <div>
+            <div class="texto">
                 <div class="quem-sou-1">
                     <div>
                         <img src="./src/imagens/luan1.png" alt="Foto de rosto de Luan Silva, homem moreno claro.">
@@ -138,6 +139,7 @@
                 </ul>
             </div>
         </div>
+
         <div id="experiencias" class="wrapper experiencias">
             <div>
                 <h2>Experiências</h2>
@@ -177,7 +179,7 @@
         </div>
     </main>
 
-    <footer>
+    <footer id="footer">
         <div class="final">
             <div class="footer-a">
                 <p>
@@ -186,8 +188,9 @@
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M1.18073 5.42653C1.49745 4.97408 2.12098 4.86405 2.57343 5.18076L12 11.7793L21.4265 5.18076C21.879 4.86405 22.5025 4.97408 22.8192 5.42653C23.1359 5.87898 23.0259 6.50251 22.5734 6.81923L12.5734 13.8192C12.2291 14.0603 11.7708 14.0603 11.4265 13.8192L1.4265 6.81923C0.974052 6.50251 0.864017 5.87898 1.18073 5.42653Z" fill="white"/>
                         </svg>
                         
-                    E-mail para contato: luan_barbosa_da_silva@outlook.com
+                    E-mail para contato: 
                 </p>
+                <p>luan_barbosa_da_silva@outlook.com</p>
                 <p>Créditos de criação: Luan Silva</p>
             </div>
             <div class="footer-b">
@@ -243,6 +246,18 @@
             </div>
         </div>
     </footer>
+
+    <a id="backToTopButton" href="#inicio">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="20" fill="#000485"/>
+            <path d="M20 27V13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13 20L20 13L27 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </a>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+
 
 </body>
 </html>
