@@ -8,6 +8,7 @@
     font-size: 62.5%;
 
     --nav-height: 7.4rem;
+    --color: rgba(52, 52, 255, 0.822);
 }
 
 ::-webkit-scrollbar {
@@ -24,7 +25,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 255, 0.664);
+    background-color: var(--color);
 }
 
 html {
@@ -56,11 +57,24 @@ body {
 
 nav {
     height: var(--nav-height);
-    background-color: rgba(0, 0, 0, 0.268);
+    background-color: var(--color);
     position: fixed;
     top: 0;
     width: 100vw;
     z-index: 5;
+}
+
+.mobile-menu {
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-menu div {
+    width: 3.2rem;
+    height: .2rem;
+    background-color: white;
+    margin: .8rem;
+    transition: .3s;
 }
 
 nav .nav-itens {
@@ -88,10 +102,11 @@ nav .nav-2 ul {
 }
 
 nav .nav-2 ul li {
-    background-color: rgba(0, 255, 255, 0.226);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     padding: 1rem 1.5rem;
     border-radius: 2rem;
+    border: 1px solid rgb(0, 0, 0);
     cursor: pointer;
     font-size: 1.5rem;
     font-weight: bold;
@@ -303,8 +318,34 @@ footer button svg {
 
 @media (max-width: 720px) {
     
+    .nav-list {
+        position: absolute;
+        top: var(--nav-height);
+        right: 0;
+        width: 100vw;
+        height: calc(100vh - var(--nav-height));
+        background-color: rgba(52, 52, 255, 0.822);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .nav-list.active {
+        transform: translateX(0);
+    }
+    
     body {
-        overflow: auto;
+        overflow: overlay;
     }
 
     .wrapper {
@@ -313,6 +354,7 @@ footer button svg {
 
     header {
         height: 60rem;
+        width: 100%;
         padding: 0;
         display: flex;
         justify-content: center;
@@ -351,3 +393,27 @@ footer button svg {
 
     }
 }
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+ opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
