@@ -167,10 +167,6 @@ img {
     height: 30rem;
 }
 
-main {
-    background: url(/src/imagens/background.png) fixed;
-}
-
 main p {
     font-weight: bold;
 }
