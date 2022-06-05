@@ -168,7 +168,7 @@ img {
 }
 
 main {
-    background-image: url(/src/imagens/background.png) fixed;
+    background: url(/src/imagens/background.png) fixed;
 }
 
 main p {
