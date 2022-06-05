@@ -143,16 +143,36 @@ header .col-a {
 }
 
 header .col-a h1 {
-    font-size: 5rem;
+    font-size: 3rem;
     padding-block: 1.3rem;
 }
 
-header .col-a h3 {
-    font-size: 2.3rem;
+header .col-a h1::after {
+    content: '|';
+    margin-left: .5rem;
+    opacity: 1;
+    animation: pisca .7s infinite;
+}
+
+@keyframes pisca {
+    0%,100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }
 
 img {
     height: 30rem;
+}
+
+main {
+    background: url(/src/imagens/background.png) fixed;
+}
+
+main p {
+    font-weight: bold;
 }
 
 main h2 {
@@ -173,6 +193,33 @@ main .quem-sou-2 {
     align-items: center;
     padding-block: 3rem;
 }
+
+main .efeito {
+    position: relative;
+}
+
+main .efeito img {
+    width: 250px;
+    height: 250px;
+    display: block;
+    border-radius: 50%;
+}
+
+main .efeito::before {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    border: 10px solid var(--color);
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    z-index: -1;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    to {transform:rotate(360deg);}
+  }
 
 main .projetos {
     height: 80rem;
@@ -211,11 +258,11 @@ main .quadro ul {
 main .quadro li {
     list-style: none;
     cursor: pointer;
-    transition: 0.2s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 main .quadro li:hover {
-    transform: scale(1.7);
+    transform: scale(1.7) rotate(360deg);
 }
 
 main .experiencias {
