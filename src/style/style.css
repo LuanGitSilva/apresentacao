@@ -215,7 +215,16 @@ main .efeito::before {
 
 @keyframes spin {
     to {transform:rotate(360deg);}
-  }
+}
+
+#cursos {
+    padding-top: var(--nav-height);
+}
+
+.lista li {
+    font-weight: bold;
+    font-size: 2rem;
+}
 
 main .projetos {
     height: 80rem;
