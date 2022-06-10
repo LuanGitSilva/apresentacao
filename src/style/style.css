@@ -219,6 +219,8 @@ main .efeito::before {
 
 #cursos {
     padding-top: var(--nav-height);
+    padding-inline: 3rem;
+    line-height: 2.5rem;
 }
 
 .lista li {
