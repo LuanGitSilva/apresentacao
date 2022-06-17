@@ -1,5 +1,13 @@
 window.addEventListener('scroll', onScroll)
 
+/*-----------*/
+var nome = prompt("Olá visitante, digite aqui seu nome para nos conhecermos melhor!");
+
+var usuario = document.querySelector("#usuario") ;
+
+usuario.textContent = "Olá, " + nome + ". Seja bem vindo. Eu sou Luan Silva, desenvolvedor front-end, e essa é a minha apresentação.";
+/*------------*/
+
 onScroll()
 function onScroll() {
     showBackToTopButtonOnScroll()
@@ -12,7 +20,6 @@ function showBackToTopButtonOnScroll() {
         backToTopButton.classList.remove('show')
     }
 }
-
 
 function typeWriter(elemento) {
   const textoArray = elemento.innerHTML.split('');
